@@ -1,0 +1,503 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Designed by Fresh Teacher">
+  <meta name="keyword" content="Solar system">
+  <meta name="author" content="Solar">
+  <link rel="icon" type="image/png" sizes="16x16" href="me-removebg-preview.png">
+  <link data-n-head="ssr" rel="manifest" href="/manifest.json" data-hid="manifest">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:site_name" content="Solar system" />
+  <meta property="og:image" content="https://fresh-teacher.github.io/solar-system/Screenshot (888).png" />
+  <link rel="stylesheet" href="styles.css">
+  <title>The Solar system 🌌</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 1rem;
+    overflow-x: hidden;
+}
+
+h1 {
+    color: yellow;
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+}
+
+.container {
+    position: relative;
+    width: min(40em, 90vw);
+    height: min(40em, 90vw);
+    font-size: min(10px, 2.5vw);
+    margin: 1rem auto;
+}
+
+.sun {
+    position: absolute;
+    top: 15em;
+    left: 15em;
+    width: 10em;
+    height: 10em;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 3em white;
+}
+
+.earth, .moon {
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+}
+
+.earth {
+    top: 5em;
+    left: 5em;
+    width: 30em;
+    height: 30em;
+    animation: orbit 36.5s linear infinite;
+}
+
+.moon {
+    top: 0;
+    right: 0;
+    width: 8em;
+    height: 8em;
+    animation: orbit 2.7s linear infinite;
+}
+
+.earth::before,
+.moon::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.earth::before {
+    top: 2.8em;
+    right: 2.8em;
+    width: 3em;
+    height: 3em;
+    background-color: aqua;
+}
+
+.moon::before {
+    top: 0.8em;
+    right: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background-color: silver;
+}
+
+.info-container {
+    width: min(600px, 95%);
+    margin: 1rem auto;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.info-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: clamp(1rem, 3vw, 1.5rem);
+    margin: 1rem 0;
+}
+
+.info-box h2 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-bottom: 0.5rem;
+}
+
+.info-box p {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+}
+
+.credit {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-weight: bold;
+    animation: rainbow 4s linear infinite;
+    text-shadow: 0 0 10px currentColor,
+                 0 0 20px currentColor,
+                 0 0 30px currentColor;
+    z-index: 100;
+}
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rainbow {
+    0% { color: red; text-shadow: 0 0 10px red; }
+    17% { color: orange; text-shadow: 0 0 10px orange; }
+    33% { color: yellow; text-shadow: 0 0 10px yellow; }
+    50% { color: green; text-shadow: 0 0 10px green; }
+    67% { color: blue; text-shadow: 0 0 10px blue; }
+    83% { color: indigo; text-shadow: 0 0 10px indigo; }
+    100% { color: violet; text-shadow: 0 0 10px violet; }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 0.5rem;
+    }
+    
+    .info-box {
+        padding: 1rem;
+    }
+    
+    .credit {
+        bottom: 0.5rem;
+        right: 0.5rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <h1>The Solar System</h1>
+    
+    <div class="container">
+        <div class="sun"></div>
+        <div class="earth">
+            <div class="moon"></div>
+        </div>
+    </div>
+
+    <div class="credit">developer by fahad</div>
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>final project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- humbergery -->
+         <div class="humbergur">
+            <i class="fa-solid fa-bars" data-visible="true"></i>
+            <i class="fa-solid fa-close"data-visible="false"></i>
+         </div>
+        <nav class="container">
+       
+          <h1 class="logo">TRAINING <span>STUDIO</span></h1>
+            <div class="nav-bar" data-visible="false">
+                <ul class="nav-links">
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Classes">Classes</a></li>
+                    <li><a href="#Schedules">Schedules</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <button class="btn">Sign Up</button>
+                  </ul>
+            </div>
+        </nav>
+      </header>
+      <div class="hero" ">
+        <video autoplay="" muted="" loop="" id="bg-video">
+            <source src="https://templatemo.com/templates/templatemo_548_training_studio/assets/images/gym-video.mp4" type="video/mp4">
+        </video>
+
+        <div class="video-overlay">
+            <div class="caption">
+                <h6>work harder, get stronger</h6>
+                <h2>easy with our <span>gym</span></h2>
+                <div class="main-button">
+                    <a>Become a member</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="container programs">
+           <div class="heading">
+            <h2>CHOOSE <span>PROGRAM</span></h2>
+            <img src="https://templatemo.com/templates/templatemo_548_training_studio/assets/images/line-dec.png" alt="">
+            <p>Training Studio is free CSS template for gyms and fitness centers. You are allowed to use this layout for your business website</p>
+           </div>
+           <div class="boxs">
+            <div class="box">
+                <img src="https://templatemo.com/templates/templatemo_548_training_studio/assets/images/features-first-icon.png" alt="box1">
+                <div class="info">
+                    <h2>Basic Fitness</h2>
+                    <p>Please do not re-distribute this template ZIP file on any template collection website. This is not allowed.</p>
+                    <a href="">DISCOVER MORE</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://templatemo.com/templates/templatemo_548_training_studio/assets/images/features-first-icon.png" alt="box1">
+                <div class="info">
+                    <h2>Basic Fitness</h2>
+                    <p>Please do not re-distribute this template ZIP file on any template collection website. This is not allowed.</p>
+                    <a href="">DISCOVER MORE</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://templatemo.com/templates/templatemo_548_training_studio/assets/images/features-first-icon.png" alt="box1">
+                <div class="info">
+                    <h2>Basic Fitness</h2>
+                    <p>Please do not re-distribute this template ZIP file on any template collection website. This is not allowed.</p>
+                    <a href="">DISCOVER MORE</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://templatemo.com/templates/templatemo_548_training_studio/assets/images/features-first-icon.png" alt="box1">
+                <div class="info">
+                    <h4>Basic Fitness</h4>
+                    <p>Please do not re-distribute this template ZIP file on any template collection website. This is not allowed.</p>
+                    <a href="">DISCOVER MORE</a>
+                </div>
+            </div>
+       
+        </div>
+        </div>
+        <section>
+            <div class="begin">
+                <div class="container contents">
+                    <h2>DON’T <span>THINK</span>, BEGIN <span>TODAY</span>!</h2>
+                    <p>Ut consectetur, metus sit amet aliquet placerat, enim est ultricies ligula, sit amet dapibus odio augue eget libero. Morbi tempus mauris a nisi luctus imperdiet.</p>
+                    <div class="main-button">
+                        <a href="#features">Become a member</a>
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+  
+    </section>
+    <section>
+        <div class="container programs">
+           <div class="heading">
+            <h2>OUR <span>CLASSES</span></h2>
+            <img src="https://templatemo.com/templates/templatemo_548_training_studio/assets/images/line-dec.png" alt="">
+            <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu</p>
+           </div>
+           <div class="row">
+            <div class="col-1">
+                <div class="day">
+                    <img src="https://templatemo.com/templates/templatemo_548_training_studio/assets/images/tabs-first-icon.png" alt="">
+                    <h4>First Training class</h4>
+                </div>  
+                <div class="day">
+                    <img src="https://templatemo.com/templates/templatemo_548_training_studio/assets/images/tabs-first-icon.png" alt="">
+                    <h4>First Training class</h4>
+                </div>  
+                <div class="day">
+                    <img src="https://templatemo.com/templates/templatemo_548_training_studio/assets/images/tabs-first-icon.png" alt="">
+                    <h4>First Training class</h4>
+                </div>  
+                <div class="day">
+                    <img src="https://templatemo.com/templates/templatemo_548_training_studio/assets/images/tabs-first-icon.png" alt="">
+                    <h4>First Training class</h4>
+                </div>  
+               
+                <div class="main-button">
+                    <a href="#features">Veiw All schedules</a>
+                </div>
+               
+                
+            </div>
+            <div class="col-2">
+                <img src="	https://templatemo.com/templates/templatemo_548_training_studio/assets/images/training-image-01.jpg" alt="">
+                <h2>First Training Class</h2>
+                <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan diam</p>
+                <div class="main-button">
+                    <a href="#features">Become a member</a>
+                </div>
+            </div>
+                
+        </div>
+  
+    </section>
+    <section>
+        <div class="schecule">
+        <div class="heading">
+            <h2>CLASSES <span>SCHEDULE</span></h2>
+            <img src="https://templatemo.com/templates/templatemo_548_training_studio/assets/images/line-dec.png" alt="">
+            <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu</p>
+           </div>
+           <div class="days">
+            <a href="">Monday <span>/</span></a>
+            <a href="">Tuesday<span>/</span></a>
+            <a href="">Wednesday<span>/</span></a>
+            <a href="">Saturday<span>/</span></a>
+            <a href="">Sunday</a>
+           </div>
+           <table class="container">
+            <tbody>
+                <tr>
+                    <td>Fitness Class</td>
+                    <td>10:00AM - 11:30AM</td>
+                    <td></td>
+                    <td>William G. Stewart</td>
+                </tr>
+                <tr>
+                    <td>Muscle Training</td>
+                    <td></td>
+                    <td></td>
+                    <td>Paul D. Newman</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>2:00PM - 3:30PM</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Yoga Training Class</td>
+                    <td ></td>
+                    <td></td>
+                    <td>Hector T. Daigle</td>
+                </tr>
+                <tr>
+                    <td>Advanced Training</td>
+                    <td></td>
+                    <td></td>
+                    <td>Bret D. Bowers</td>
+                </tr>
+            </tbody>
+        </table>
+
+      </div>
+    </section>
+    <section>
+        <div class="container expert">
+            <div class="heading">
+                <h2>EXPERT <span>TRAINERS</span></h2>
+                <img src="https://templatemo.com/templates/templatemo_548_training_studio/assets/images/line-dec.png" alt="">
+                <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
+               </div>
+               <div class="cards">
+                <div class="card">
+                    <img src="	https://templatemo.com/templates/templatemo_548_training_studio/assets/images/first-trainer.jpg" alt="">
+                
+                   <a href="">Strength Trainer</a>
+                   <h2>Bret D. Bowers</h2>
+                   <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
+                   <div class="social-media">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-behance"></i>
+                   </div>
+                </div>
+                <div class="card">
+                    <img src="https://templatemo.com/templates/templatemo_548_training_studio/assets/images/second-trainer.jpg" alt="">
+                
+                   <a href="">Strength Trainer</a>
+                   <h2>Hector T. Daigl</h2>
+                   <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
+                   <div class="social-media">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-behance"></i>
+                   </div>
+                </div>
+                <div class="card">
+                    <img src="https://templatemo.com/templates/templatemo_548_training_studio/assets/images/third-trainer.jpg" alt="">
+                
+                   <a href="">Strength Trainer</a>
+                   <h2> Paul D. Newman</h2>
+                   <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
+                   <div class="social-media">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-behance"></i>
+                   </div>
+                </div>
+               </div>
+           
+        </div>
+    </section>
+    <section>
+        <!-- <div class="map-form">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31303.010322530637!2d49.162122848316464!3d11.2705031286405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3d96918aac9aa7f3%3A0x6e8f68a7e697e656!2sBosaso!5e0!3m2!1sen!2sso!4v1718202041067!5m2!1sen!2sso"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <input type="text" required placeholder="Your name*">
+                    <input type="email" required placeholder="Your email*"> <br>
+                    <input type="text" placeholder="subject" id="Subject"> <br>
+                    <textarea rows="6" cols="5" placeholder="Masseges" id="massages"></textarea>
+                    <div class="main-button">
+                        <a href="#features">SEND MESSAGE</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Copyright &copy;  2020 Training Studio - Designed by <span>TemplateMo</span></p>
+    </footer> -->
+     <!-- Contact Section -->
+     <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="Email" required>
+          <textarea placeholder="Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </section>
+    
+      <!-- Footer -->
+      <footer class="footer-end">
+        <p> copyright@ developed by osmaan jeylani 2025 .</p>
+      </footer>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+        
+    <script>
+    <script>
+        let navbar=document.querySelector(".nav-bar")
+        let humbergur=document.querySelector(".humbergur")
+        let icons=document.querySelectorAll("i")
+    
+        humbergur.addEventListener('click', function(event){
+           let isvible=navbar.getAttribute('data-visible');
+            if(isvible == 'true'){
+                navbar.setAttribute('data-visible','false');
+                icons[0].setAttribute('data-visible','true');
+                icons[1].setAttribute('data-visible','false')
+            }
+            else
+            {
+                navbar.setAttribute('data-visible','true');
+                icons[0].setAttribute('data-visible','false');
+                icons[1].setAttribute('data-visible','true')
+            }
+        })
+    </script>
+</body>
+</html>
